@@ -52,3 +52,30 @@
 3. Enters amount, category, and frequency (e.g., monthly)  
 4. Saves settings  
 5. The system automatically logs the expense every month  
+
+## 3. UI Prototypes
+**Wireframes & Mockups:**
+- **Home Screen:** Overview of finances  
+- **Transaction Entry Page:** Simple form with category selection  
+- **Reports Page:** Charts displaying spending patterns  
+- **Settings Page:** Budgeting options and notifications  
+
+## 4. Information Architecture and Technical Design
+
+### Tech Stack:
+- **Frontend:** React  
+- **Backend:** Node.js + Express  
+- **Database:** PostgreSQL  
+- **API:** REST API for transactions and reporting  
+- **Authentication:** JWT for secure login  
+- **Hosting:** Cloud deployment on Vercel/Render  
+
+## 5. Project Management and User Testing
+
+### User Testing Plan:
+- **Internal Testing:** Debugging and fixing errors during development  
+- **Feedback Loop:** Ask peers to test functionalities and report usability issues  
+- **Final Review:** Ensure all features meet defined use cases before submission  
+
+---
+**Created by:** Dan Luchin
