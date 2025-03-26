@@ -58,7 +58,8 @@
 - **Home Screen:** Overview of finances  
 - **Transaction Entry Page:** Simple form with category selection  
 - **Reports Page:** Charts displaying spending patterns  
-- **Settings Page:** Budgeting options and notifications  
+- **Settings Page:** Budgeting options and notifications
+**[Figma Prototype](https://www.figma.com/proto/ugD7XRGSDfTBwuc1kg0BLu/Untitled?node-id=1-2&p=f&t=as645tQGiAJtFN7Y-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)**
 
 ## 4. Information Architecture and Technical Design
 
