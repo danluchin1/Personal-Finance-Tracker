@@ -69,12 +69,14 @@
   - `jsonwebtoken` (JWT authentication)  
   - `pg` (PostgreSQL client)  
   - `cors` (cross-origin requests)  
+- **[Backend](backend)**
 
 ### **Frontend**  
 - **Framework**: React.js  
 - **Routing**: React Router  
 - **HTTP Client**: Axios (with interceptors)  
-- **Styling**: CSS (inline + modular)  
+- **Styling**: CSS (inline + modular)
+- **[Frontend](frontend)**  
 
 ---
 
@@ -101,7 +103,7 @@
 ### **Frontend**  
 1. Install dependencies:  
    ```bash
-   cd frontend && npm install
+   cd frontend/personal-finance-tracker && npm install
    ```  
 2. Start the app:  
    ```bash
