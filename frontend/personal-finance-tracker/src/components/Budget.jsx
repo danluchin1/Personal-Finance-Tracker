@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../api';
 
 const Budget = ({ userId }) => {
   const [budgets, setBudgets] = useState([]);
@@ -7,11 +7,11 @@ const Budget = ({ userId }) => {
   const [limit, setLimit] = useState('');
 
   useEffect(() => {
-    axios.get(`/budget/${userId}`).then((res) => setBudgets(res.data));
+    api.get(`/budget/${userId}`).then((res) => setBudgets(res.data));
   }, [userId]);
 
   const setBudget = async () => {
-    await axios.post(`/budget/${userId}`, { category, limit });
+    await api.post(`/budget/${userId}`, { category, limit });
     setBudgets([...budgets, { category, limit }]);
   };
 

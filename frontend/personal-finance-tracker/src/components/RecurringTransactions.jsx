@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../api';
 
 const RecurringTransactions = ({ userId }) => {
   const [recurring, setRecurring] = useState([]);
@@ -8,11 +8,11 @@ const RecurringTransactions = ({ userId }) => {
   const [frequency, setFrequency] = useState('');
 
   useEffect(() => {
-    axios.get(`/recurring/${userId}`).then((res) => setRecurring(res.data));
+    api.get(`/recurring/${userId}`).then((res) => setRecurring(res.data));
   }, [userId]);
 
   const addRecurring = async () => {
-    await axios.post(`/recurring/${userId}`, { amount, category, frequency });
+    await api.post(`/recurring/${userId}`, { amount, category, frequency });
     setRecurring([...recurring, { amount, category, frequency }]);
   };
 

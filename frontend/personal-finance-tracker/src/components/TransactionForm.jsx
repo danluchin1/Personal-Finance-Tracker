@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 
 const TransactionForm = ({ onAdd, userId }) => {
   const [amount, setAmount] = useState('');
@@ -7,9 +7,13 @@ const TransactionForm = ({ onAdd, userId }) => {
   const [date, setDate] = useState('');
 
   const addTransaction = async () => {
-    const transaction = { userId, amount, category, date };
-    await axios.post('/transactions', transaction);
-    onAdd(transaction);
+    try {
+      const transaction = { amount, category, date };
+      await api.post('/transactions', transaction);
+      onAdd({ ...transaction, userId });
+    } catch (error) {
+      console.error('Error adding transaction:', error);
+    }
   };
 
   return (

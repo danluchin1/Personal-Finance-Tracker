@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 
 const Reports = ({ userId }) => {
   const [report, setReport] = useState([]);
 
   useEffect(() => {
-    axios.get(`/reports/${userId}/last-month`).then(res => setReport(res.data));
+    api.get(`/reports/${userId}/last-month`).then(res => setReport(res.data));
   }, [userId]);
 
   return (

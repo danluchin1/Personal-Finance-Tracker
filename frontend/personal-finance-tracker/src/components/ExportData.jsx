@@ -1,9 +1,9 @@
 import React from 'react';
-import axios from 'axios';
+import api from '../api';
 
 const ExportData = ({ userId }) => {
   const exportFile = async (format) => {
-    const response = await axios.get(`/export/${userId}/export/${format}`, {
+    const response = await api.get(`/export/${userId}/export/${format}`, {
       responseType: 'blob',
     });
 
