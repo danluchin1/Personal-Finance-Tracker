@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       {token && <Navbar setToken={setToken} />}
-      <div style={{ padding: '20px' }}>
+      <div className="min-h-screen bg-gray-100 p-6">
         <Routes>
           <Route 
             path="/" 

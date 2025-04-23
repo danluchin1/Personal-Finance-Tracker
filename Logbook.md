@@ -8,3 +8,4 @@
 | 08.4.2025  | 2          | Fixed errors from previous implementations | Fixed some errors in the frontend, added a proxy to vite.config.js file, and tried to fix errors with the database (fixed some, still have issue with the database hostname) |
 | 10.4.2025  | 2.5          | Fixed errors from previous implementations | Created all the tables in PostgreSQL needed for the application. Added login/logout functionality. All the errors from 08.4.2025 have been corrected.  |
 | 10.4.2025  | 1.5          | Finished the second phase | Added the report of the second phase of the project. |
+| 23.4.2025  | 4          | Added styles to the frontend. Use Tailwind CSS |

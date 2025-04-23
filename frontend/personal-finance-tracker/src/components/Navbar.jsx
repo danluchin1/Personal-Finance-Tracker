@@ -5,15 +5,8 @@ import LogoutButton from './LogoutButton';
 
 const Navbar = ({ setToken }) => {
   return (
-    <nav style={{
-      backgroundColor: '#333',
-      padding: '15px 20px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      color: 'white'
-    }}>
-      <Link to="/" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>
+    <nav className="bg-gray-800 p-4 flex justify-between items-center text-white">
+      <Link to="/" className="text-white no-underline text-xl hover:text-gray-300">
         Finance Tracker
       </Link>
       <LogoutButton setToken={setToken} />
