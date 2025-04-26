@@ -1,17 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/postcss7-compat';
-import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   plugins: [react()],
+  // Disable PostCSS entirely
   css: {
-    postcss: {
-      plugins: [
-        tailwindcss,
-        autoprefixer,
-      ],
-    },
+    postcss: false, // 👈 Critical: Skip PostCSS processing
+  },
+  // Optional: Optimize Tailwind
+  optimizeDeps: {
+    include: ['tailwindcss'], // Force Vite to pre-bundle Tailwind
   },
   server: {
     proxy: {
