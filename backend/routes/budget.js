@@ -8,10 +8,10 @@ router.post('/:userId', async (req, res) => {
   const { category, limit } = req.body;
   
   await pool.query(
-    `INSERT INTO budgets (user_id, category, budget_limit) 
+    `INSERT INTO budgets (user_id, category, "limit") 
      VALUES ($1, $2, $3) 
      ON CONFLICT (user_id, category) 
-     DO UPDATE SET budget_limit = $3`, 
+     DO UPDATE SET "limit" = $3`, 
     [userId, category, limit]
   );
   

@@ -24,4 +24,16 @@ api.interceptors.response.use(
   }
 );
 
+// Utility to decode JWT and extract userId and username
+export function getUserInfoFromToken() {
+  const token = localStorage.getItem('token');
+  if (!token) return {};
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    return { userId: payload.userId, username: payload.username };
+  } catch {
+    return {};
+  }
+}
+
 export default api;
