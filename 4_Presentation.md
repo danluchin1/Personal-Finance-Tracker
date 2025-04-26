@@ -23,6 +23,7 @@ The application aims to provide a user-friendly and flexible solution to common 
 
 ### 📌 Use Case Summary
 
+[Use cases](https://github.com/danluchin1/Personal-Finance-Tracker/blob/main/1_Definition_and_Planning.md#2-use-cases-and-user-flows)
 | Use Case                                | Implemented (Yes/No) | Demonstration / Notes |
 |-----------------------------------------|----------------------|--------------------------------------------------------------------------------------------|
 | Adding a Transaction                    | Yes                  | User can add transactions with amount, category, and date.                                 |
