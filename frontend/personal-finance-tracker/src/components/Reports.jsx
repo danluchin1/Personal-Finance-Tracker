@@ -19,7 +19,7 @@ const Reports = ({ userId }) => {
               className="flex justify-between items-center p-3 bg-gray-50 rounded-md"
             >
               <span className="font-medium">{r.category}</span>
-              <span className="text-red-600 font-bold">${r.total.toFixed(2)}</span>
+              <span className="text-red-600 font-bold">${Number(r.total).toFixed(2)}</span>
             </li>
           ))
         ) : (
