@@ -33,7 +33,7 @@ const Home = () => {
         />
         <TransactionList transactions={transactions} />
         <Reports userId={userId} />
-        <Budget userId={userId} />
+        <Budget userId={userId} transactions={transactions} />
         <RecurringTransactions userId={userId} />
         <ExportData userId={userId} />
       </div>

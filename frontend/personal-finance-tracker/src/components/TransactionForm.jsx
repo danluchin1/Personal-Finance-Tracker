@@ -11,6 +11,9 @@ const TransactionForm = ({ onAdd, userId }) => {
       const transaction = { amount, category, date };
       await api.post('/transactions', transaction);
       onAdd({ ...transaction, userId });
+      setAmount('');
+      setCategory('');
+      setDate('');
     } catch (error) {
       console.error('Error adding transaction:', error);
     }
@@ -23,17 +26,20 @@ const TransactionForm = ({ onAdd, userId }) => {
         <input
           type="number"
           placeholder="Amount"
+          value={amount}
           onChange={(e) => setAmount(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <input
           type="text"
           placeholder="Category"
+          value={category}
           onChange={(e) => setCategory(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <input
           type="date"
+          value={date}
           onChange={(e) => setDate(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />

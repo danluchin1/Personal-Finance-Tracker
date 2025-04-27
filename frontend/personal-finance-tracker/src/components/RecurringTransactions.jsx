@@ -14,6 +14,9 @@ const RecurringTransactions = ({ userId }) => {
   const addRecurring = async () => {
     await api.post(`/recurring/${userId}`, { amount, category, frequency });
     setRecurring([...recurring, { amount, category, frequency }]);
+    setAmount('');
+    setCategory('');
+    setFrequency('');
   };
 
   return (
@@ -23,19 +26,23 @@ const RecurringTransactions = ({ userId }) => {
         <input
           type="number"
           placeholder="Amount"
+          value={amount}
           onChange={(e) => setAmount(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <input
           type="text"
           placeholder="Category"
+          value={category}
           onChange={(e) => setCategory(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <select
+          value={frequency}
           onChange={(e) => setFrequency(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
+          <option value="">Select Frequency</option>
           <option value="monthly">Monthly</option>
           <option value="weekly">Weekly</option>
         </select>
